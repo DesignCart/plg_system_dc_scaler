@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade" version="5.0">
+    <name>PLG_SYSTEM_DC_SCALER</name>
+    <author>Design Cart</author>
+    <creationDate>2025-11-15</creationDate>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_DC_SCALER_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="dc_scaler">dc_scaler.php</filename>
+        <folder>helper</folder>
+        <folder>elements</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_dc_scaler.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_dc_scaler.sys.ini</language>
+
+        <language tag="pl-PL">language/pl-PL/pl-PL.plg_system_dc_scaler.ini</language>
+        <language tag="pl-PL">language/pl-PL/pl-PL.plg_system_dc_scaler.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="PLG_SYSTEM_DC_SCALER_FIELDSET_BASIC">
+
+                <field
+                    name="enable_css"
+                    type="radio"
+                    label="PLG_SYSTEM_DC_SCALER_ENABLE_CSS_LABEL"
+                    default="1"
+                    description="PLG_SYSTEM_DC_SCALER_ENABLE_CSS_DESC"
+                    class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                    name="enable_js"
+                    type="radio"
+                    label="PLG_SYSTEM_DC_SCALER_ENABLE_JS_LABEL"
+                    default="1"
+                    description="PLG_SYSTEM_DC_SCALER_ENABLE_JS_DESC"
+                    class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                    name="debug"
+                    type="radio"
+                    label="PLG_SYSTEM_DC_SCALER_DEBUG_LABEL"
+                    default="0"
+                    description="PLG_SYSTEM_DC_SCALER_DEBUG_DESC"
+                    class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                    name="exclude_css"
+                    type="textarea"
+                    label="PLG_SYSTEM_DC_SCALER_EXCLUDE_CSS_LABEL"
+                    description="PLG_SYSTEM_DC_SCALER_EXCLUDE_CSS_DESC">
+                </field>
+
+                <field
+                    name="exclude_js"
+                    type="textarea"
+                    label="PLG_SYSTEM_DC_SCALER_EXCLUDE_JS_LABEL"
+                    description="PLG_SYSTEM_DC_SCALER_EXCLUDE_JS_DESC">
+                </field>
+
+                <field 
+                    name="lifetime" 
+                    type="number"
+                    label="PLG_SYSTEM_DC_SCALER_LIFETIME_LABEL"
+                    description="PLG_SYSTEM_DC_SCALER_LIFETIME_DESC"
+                    default="60"
+                    min="1"
+                />
+
+                <field 
+                    name="purge_on_next_request" 
+                    type="radio"
+                    label="PLG_SYSTEM_DC_SCALER_PURGE_NEXT_LABEL"
+                    description="PLG_SYSTEM_DC_SCALER_PURGE_NEXT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                >
+                    <option value="0">PLG_SYSTEM_DC_SCALER_NO</option>
+                    <option value="1">PLG_SYSTEM_DC_SCALER_YES</option>
+                </field>
+
+
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
