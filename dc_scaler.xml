@@ -8,7 +8,7 @@
     <files>
         <filename plugin="dc_scaler">dc_scaler.php</filename>
         <folder>helper</folder>
-        <folder>elements</folder>
+        <folder>vendor</folder>
     </files>
 
     <languages>
